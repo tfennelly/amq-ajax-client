@@ -2,8 +2,8 @@
 
 [ActiveMQ Ajax client](http://activemq.apache.org/ajax.html) NPM package.
 
-Basically just a copy and tweak of the `.js` files in the [activemq-web-demo](https://github.com/apache/activemq/tree/master/activemq-web-demo),
-making them usable in CommonJS style JavaScript modules.   
+CommonJS version of the API defined in [ActiveMQ Ajax client](http://activemq.apache.org/ajax.html) docs.
+See the `.js` files in the [activemq-web-demo](https://github.com/apache/activemq/tree/master/activemq-web-demo).   
 
 ## Install
 
