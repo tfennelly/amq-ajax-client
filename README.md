@@ -14,7 +14,7 @@ npm install --save amq-ajax-client
 ## Use
 
 ```javascript
-var amq = require('amq-ajax-client);
+var amq = require('amq-ajax-client');
 
 amq.init({ 
     uri: 'amq', 
