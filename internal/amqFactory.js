@@ -178,12 +178,12 @@ exports.newAmq = function(adapter) {
         if (batchInProgress) {
             messageQueue[messageQueue.length] = {message:message, headers:headers};
         } else {
-            org.activemq.Amq.startBatch();
+            amq.startBatch();
             adapter.ajax(uri, { method: 'post',
                 data: addClientId( buildParams( [message] ) ),
                 error: errorHandler,
                 headers: headers,
-                success: org.activemq.Amq.endBatch});
+                success: amq.endBatch});
         }
     };
 
