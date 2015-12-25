@@ -22,6 +22,8 @@
 
 // See https://github.com/apache/activemq/tree/master/activemq-web-demo/src/main/webapp/js/amq_jquery_adapter.js
 
+var warnAboutConnectionHeader = true;
+
 exports.newAdapter = function(jQuery) {
     return {
         init: function(options) {
@@ -78,6 +80,11 @@ exports.newAdapter = function(jQuery) {
                 }
             }
 
+            if (warnAboutConnectionHeader === true) {
+                console.log('NOTE: Setting the "Connection" request header is rejected by some browsers, resulting in a scary looking error.');
+                console.log('NOTE: In such cases, the request is usually executed without issue, so usually no need to worry.');
+                warnAboutConnectionHeader = false;
+            }
             jQuery.ajax( request );
         },
 
